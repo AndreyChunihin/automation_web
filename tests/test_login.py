@@ -8,7 +8,7 @@ class TestLogin:
         login_in_app.open()
         login_in_app.fill_fields_login()
         time.sleep(4)
-        current_url = 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'
+        current_url = driver.current_url
         expected_url = 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'
         assert current_url == expected_url
 

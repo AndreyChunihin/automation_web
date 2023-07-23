@@ -1,5 +1,5 @@
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait as wait
 
 
 class MainPage:
@@ -11,4 +11,13 @@ class MainPage:
         self.driver.get(self.url)
 
     def element_is_visible(self, locator, timeout=5):
-        return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+
+    def elements_are_visible(self, locator, timeout=5):
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
+
+    def find_element(self, locator, timeout=5):
+        return WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located(locator))
+
+    def scroll_to_element(self, element):
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
