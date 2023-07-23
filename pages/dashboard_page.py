@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from pages.main_page import MainPage
 from locators.elements_dashboar_page import DashboardWidgets
 
@@ -18,15 +20,19 @@ class DashboardPage(MainPage):
             self.parent = parent
 
         def check_widget_name(self):
-            widget_element = self.parent.element_is_visible(self.parent.locators.TimeAtWorkWidget.WIDGET_NAME)
-            widget_name = widget_element
+            widget_element = self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.WIDGET_NAME)
+            widget_name = widget_element.text
             return widget_name
 
-        def CHECK_PENDING_SELF_REVIEW_LINK(self):
-            self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.PENDING_SELF_REVIEW).click()
+        def pending_self_review(self):
+            self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.
+                                                                      PENDING_SELF_REVIEW).click()
+            #return url for assert
+            return self.parent.driver.current_url
 
-        def CHECK_TIMESHEETS_TO_APPROVE_LINK(self):
+        def check_timesheets_to_approve_link(self):
             self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.TIMESHEETS_TO_APPROVE).click()
+            return self.parent.driver.current_url
 
         def CHECK_CANDIDATES_TO_INTERVIEW_LINK(self):
             self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.CANDIDATES_TO_INTERVIEW).click()
