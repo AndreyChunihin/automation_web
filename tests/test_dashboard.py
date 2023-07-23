@@ -1,3 +1,7 @@
+import time
+
+from pages.dashboard_page import DashboardPage
+
 
 class TestDashboard:
     # Time at Work
@@ -7,7 +11,7 @@ class TestDashboard:
         assert widget_name == "Time at Work"
 
     # Test clicking on "Pending Self Review" link
-    def test_widget_name(self, login_and_open_dashboard):
+    def test_widget_PSRL_name(self, login_and_open_dashboard):
         dashboard_page = login_and_open_dashboard
         widget_twa = dashboard_page.WidgetTWA(dashboard_page)
         assert widget_twa.check_widget_name() == 'My Actions'
@@ -27,3 +31,15 @@ class TestDashboard:
         expected_url = "https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet"
 
         assert timesheets_to_approve_link == expected_url
+
+        #Quick Launch
+
+    def test_quick_launch_widget_name(self, login_and_open_dashboard):
+        dashboard_page = login_and_open_dashboard
+        quick_launch_widget = DashboardPage.QuickLaunchWidget(dashboard_page)
+        QL_name = quick_launch_widget.check_element_name_ql()
+        expected_name = 'Quick Launch'
+
+        assert expected_name == QL_name
+
+

@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 
 class DashboardWidgets:
     class TimeAtWorkWidget:
-        WIDGET = (By.XPATH,"//body/div[@id='app']"
-                           "/div[@class='oxd-layout']"
-                           "/div[@class='oxd-layout-container --collapse']"
-                           "/div[@class='oxd-layout-context']"
-                           "/div[@class='oxd-grid-3 "
-                           "orangehrm-dashboard-grid']/div[1]/div[1]")
+        WIDGET = (By.XPATH, "//body/div[@id='app']"
+                            "/div[@class='oxd-layout']"
+                            "/div[@class='oxd-layout-container --collapse']"
+                            "/div[@class='oxd-layout-context']"
+                            "/div[@class='oxd-grid-3 "
+                            "orangehrm-dashboard-grid']/div[1]/div[1]")
         WIDGET_NAME = (By.XPATH, "//p[normalize-space()='Time at Work']")
 
     class MyActionsWIDGET:
@@ -19,7 +19,10 @@ class DashboardWidgets:
         CANDIDATES_TO_INTERVIEW = (By.XPATH, "//p[normalize-space()='(2) Candidates to Interview']")
 
     class QuickLaunchWIDGET:
-        WIDGET_NAME = (By.XPATH, "//p[normalize-space()='Quick Launch']")
+        ELEMENT_QL = (By.XPATH,
+                     "//body/div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div["
+                     "@class='oxd-layout-context']/div[@class='oxd-grid-3 orangehrm-dashboard-grid']/div[3]/div[1]")
+        WIDGET_NAME_QL = (By.XPATH, "//p[normalize-space()='Quick Launch']")
         ASSIGN_LEAVE_BUTTON = (By.XPATH, "//button[@title='Assign Leave']//*[@role='presentation']")
         LEAVE_LIST_BUTTON = (By.XPATH, "//button[@title='Leave List']//*[@role='presentation']")
         TIMESHEETS_BUTTON = (By.XPATH, "//button[@title='Timesheets']//*[@role='presentation']")

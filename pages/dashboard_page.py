@@ -1,5 +1,3 @@
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pages.main_page import MainPage
 from locators.elements_dashboar_page import DashboardWidgets
 
@@ -26,8 +24,8 @@ class DashboardPage(MainPage):
 
         def pending_self_review(self):
             self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.
-                                                                      PENDING_SELF_REVIEW).click()
-            #return url for assert
+                                           PENDING_SELF_REVIEW).click()
+            # return url for assert
             return self.parent.driver.current_url
 
         def check_timesheets_to_approve_link(self):
@@ -41,6 +39,18 @@ class DashboardPage(MainPage):
             self.parent.element_is_visible(self.parent.locators.MyActionsWIDGET.LEAVE_REQUESTS_TO_APPROVE).click()
 
         # Quick Launch
+
+    class QuickLaunchWidget:
+
+        def __init__(self, parent):
+            self.parent = parent
+
+        def check_element_name_ql(self):
+            widget_element = self.parent.find_element(self.parent.locators.QuickLaunchWIDGET.ELEMENT_QL)
+            self.parent.scroll_to_element(widget_element)
+            widget_name = widget_element.text
+            return widget_name
+
 
     def widget_q_l(self):
         self.find_element(self.locators.QuickLaunchWIDGET.WIDGET_NAME)
