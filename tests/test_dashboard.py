@@ -9,6 +9,7 @@ class TestDashboard:
         assert widget_name == "Time at Work"
 
     # Test clicking on "Pending Self Review" link
+
     def test_widget_PSRL_name(self, login_and_open_dashboard):
         dashboard_page = login_and_open_dashboard
         widget_twa = dashboard_page.WidgetTWA(dashboard_page)
@@ -46,7 +47,7 @@ class TestDashboard:
 
         assert LRTA_link == expected_url
 
-        # Quick Launch
+    # Quick Launch
 
     def test_quick_launch_widget_name(self, login_and_open_dashboard):
         dashboard_page = login_and_open_dashboard
@@ -102,3 +103,38 @@ class TestDashboard:
         expected_url = "https://opensource-demo.orangehrmlive.com/web/index.php/time/viewMyTimesheet"
 
         assert MTB_link == expected_url
+
+    # Buzz Latest Posts
+    def test_BLP_widget_name(self, login_and_open_dashboard):
+        dashboard_page = login_and_open_dashboard
+        BLP_widget_name = DashboardPage.widget_b_l_p(dashboard_page)
+        expected_name = 'Buzz Latest Posts'
+
+        assert BLP_widget_name == expected_name
+
+    # Employees on Leave Today
+
+    def test_EOLT_widget_name(self, login_and_open_dashboard):
+        dashboard_page = login_and_open_dashboard
+        EOLT_widget_name = DashboardPage.widget_e_o_l_t(dashboard_page)
+        expected_name = 'Employees on Leave Today'
+
+        assert EOLT_widget_name == expected_name
+
+    # Employee Distribution by Sub Unit
+
+    def test_EDbSU_widget_name(self, login_and_open_dashboard):
+        dashboard_page = login_and_open_dashboard
+        EDbSU_widget_name = DashboardPage.widget_e_d_b_s_u(dashboard_page)
+        expected_name = 'Employee Distribution by Sub Unit'
+
+        assert EDbSU_widget_name == expected_name
+
+    # Employee Distribution by Location
+
+    def test_EDBL_widget_name(self, login_and_open_dashboard):
+        dashboard_page = login_and_open_dashboard
+        EDBL_widget_name = DashboardPage.widget_e_d_b_l(dashboard_page)
+        expected_name = 'Employee Distribution by Location'
+
+        assert EDBL_widget_name == expected_name

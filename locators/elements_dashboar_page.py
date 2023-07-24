@@ -13,8 +13,8 @@ class DashboardWidgets:
 
     class MyActionsWIDGET:
         WIDGET_NAME = (By.XPATH, "//p[normalize-space()='My Actions']")
-        LEAVE_REQUESTS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(6) Leave Requests to Approve']")
-        TIMESHEETS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(7) Timesheets to Approve']")
+        LEAVE_REQUESTS_TO_APPROVE = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div[1]/p')
+        TIMESHEETS_TO_APPROVE = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/p')
         PENDING_SELF_REVIEW = (By.XPATH, "//p[normalize-space()='(1) Pending Self Review']")
         CANDIDATES_TO_INTERVIEW = (By.XPATH, "//p[normalize-space()='(1) Candidate to Interview']")
 

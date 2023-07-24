@@ -40,8 +40,6 @@ class DashboardPage(MainPage):
             self.parent.find_element(self.parent.locators.MyActionsWIDGET.LEAVE_REQUESTS_TO_APPROVE).click()
             return self.parent.driver.current_url
 
-
-
         # Quick Launch
 
     class QuickLaunchWidget:
@@ -82,27 +80,27 @@ class DashboardPage(MainPage):
         # Buzz Latest Posts
 
     def widget_b_l_p(self):
-        self.find_element(self.locators.BuzzLatestPosts.WIDGET_NAME)
-        self.scroll_to_element(self.locators.BuzzLatestPosts.WIDGET_NAME)
-        self.element_is_visible(self.locators.BuzzLatestPosts.WIDGET_NAME)
+        widget_element = self.find_element(self.locators.BuzzLatestPosts.WIDGET_NAME)
+        widget_name = widget_element.text
+        return widget_name
 
         # Employees on Leave Today
 
     def widget_e_o_l_t(self):
-        self.find_element(self.locators.EmployeesOnLeaveToday.WIDGET_NAME)
-        self.scroll_to_element(self.locators.EmployeesOnLeaveToday.WIDGET_NAME)
-        self.element_is_visible(self.locators.EmployeesOnLeaveToday.WIDGET_NAME)
+        widget_element = self.find_element(self.locators.EmployeesOnLeaveToday.WIDGET_NAME)
+        widget_name = widget_element.text
+        return widget_name
 
         # Employee Distribution by Sub Unit
 
     def widget_e_d_b_s_u(self):
-        self.find_element(self.locators.EmployeeDistributionBySubUnit.WIDGET_NAME)
-        self.scroll_to_element(self.locators.EmployeeDistributionBySubUnit.WIDGET_NAME)
-        self.element_is_visible(self.locators.EmployeeDistributionBySubUnit.WIDGET_NAME)
+        widget_element = self.find_element(self.locators.EmployeeDistributionBySubUnit.WIDGET_NAME)
+        widget_name = widget_element.text
+        return widget_name
 
         # Employee Distribution by Location
 
     def widget_e_d_b_l(self):
-        self.find_element(self.locators.EmployeeDistributionByLocation.WIDGET_NAME)
-        self.scroll_to_element(self.locators.EmployeeDistributionByLocation.WIDGET_NAME)
-        self.element_is_visible(self.locators.EmployeeDistributionByLocation.WIDGET_NAME)
+        widget_element = self.find_element(self.locators.EmployeeDistributionByLocation.WIDGET_NAME)
+        widget_name = widget_element.text
+        return widget_name
