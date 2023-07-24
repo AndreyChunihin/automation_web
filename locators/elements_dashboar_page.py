@@ -13,15 +13,13 @@ class DashboardWidgets:
 
     class MyActionsWIDGET:
         WIDGET_NAME = (By.XPATH, "//p[normalize-space()='My Actions']")
-        LEAVE_REQUESTS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(8) Leave Requests to Approve']")
-        TIMESHEETS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(9) Timesheets to Approve']")
+        LEAVE_REQUESTS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(6) Leave Requests to Approve']")
+        TIMESHEETS_TO_APPROVE = (By.XPATH, "//p[normalize-space()='(7) Timesheets to Approve']")
         PENDING_SELF_REVIEW = (By.XPATH, "//p[normalize-space()='(1) Pending Self Review']")
-        CANDIDATES_TO_INTERVIEW = (By.XPATH, "//p[normalize-space()='(2) Candidates to Interview']")
+        CANDIDATES_TO_INTERVIEW = (By.XPATH, "//p[normalize-space()='(1) Candidate to Interview']")
 
     class QuickLaunchWIDGET:
-        ELEMENT_QL = (By.XPATH,
-                     "//body/div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div["
-                     "@class='oxd-layout-context']/div[@class='oxd-grid-3 orangehrm-dashboard-grid']/div[3]/div[1]")
+        ELEMENT_QL = (By.XPATH,"//p[normalize-space()='Quick Launch']")
         WIDGET_NAME_QL = (By.XPATH, "//p[normalize-space()='Quick Launch']")
         ASSIGN_LEAVE_BUTTON = (By.XPATH, "//button[@title='Assign Leave']//*[@role='presentation']")
         LEAVE_LIST_BUTTON = (By.XPATH, "//button[@title='Leave List']//*[@role='presentation']")
