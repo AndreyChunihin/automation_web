@@ -1,5 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait as wait
 
 
 class MainPage:
@@ -21,3 +22,6 @@ class MainPage:
 
     def scroll_to_element(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+
+    def element_is_present(self, locator, timeout=5):
+        return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))
