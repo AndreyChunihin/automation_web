@@ -1,5 +1,6 @@
 from pages.pim_page import TestAddNewUser
 
+
 class TestAddUser:
 
     def test_add_new_user(self, login_and_open_dashboard):

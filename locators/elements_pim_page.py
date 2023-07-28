@@ -41,9 +41,13 @@ class PimElements:
         EMPLOYEE_LIST_BUTTON = (By.XPATH, '//*[@id="app"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/a')
 
     class EmployeeInformation:
+        PERSONAL_DETAILS = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[1]/a')
         EMPLOYEE_LIST_TAB = (By.CSS_SELECTOR, '#app header nav ul li:nth-child(2) a')
         EMPLOYEE_LIST_FIELD = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div['
                                          '2]/div/div[2]/input')
+        EMPLOYEE_NAME_SEARCH_FIELD = (
+            By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]'
+                      '/div/div[2]/div/div/input')
         SEARCH_BUTTON = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]')
         EMPLOYEE_CARD = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div')
 
@@ -55,4 +59,4 @@ class PimElements:
                                  '/div[2]/div[1]/form/div[2]/div[1]/div[1]/div/div[2]/input')
         DELETE_BUTTON = (By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]'
                                    '/div/div[2]/div/div/div[9]/div/button[1]')
-        YES_DELETE_BUTTON = (By.XPATH,'//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]')
+        YES_DELETE_BUTTON = (By.XPATH, '//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]')

@@ -1,5 +1,24 @@
 [
   "tests/elements_test.py::Testelements::TestTextBox::test",
   "tests/elements_test.py::Testelements::TestTextBox::test_text_box",
-  "tests/elements_test.py::test"
+  "tests/elements_test.py::test",
+  "tests/test_add_new_user.py::TestAddUser::test_add_new_user",
+  "tests/test_dashboard.py::TestDashboard::test_BLP_widget_name",
+  "tests/test_dashboard.py::TestDashboard::test_EDBL_widget_name",
+  "tests/test_dashboard.py::TestDashboard::test_EDbSU_widget_name",
+  "tests/test_dashboard.py::TestDashboard::test_EOLT_widget_name",
+  "tests/test_dashboard.py::TestDashboard::test_apply_leave_button",
+  "tests/test_dashboard.py::TestDashboard::test_assign_leave_button",
+  "tests/test_dashboard.py::TestDashboard::test_candidates_to_interview_link",
+  "tests/test_dashboard.py::TestDashboard::test_leave_list_button_link",
+  "tests/test_dashboard.py::TestDashboard::test_leave_requests_to_approve_link",
+  "tests/test_dashboard.py::TestDashboard::test_my_leave_button_link",
+  "tests/test_dashboard.py::TestDashboard::test_my_timesheets_button",
+  "tests/test_dashboard.py::TestDashboard::test_pending_self_review_link",
+  "tests/test_dashboard.py::TestDashboard::test_quick_launch_widget_name",
+  "tests/test_dashboard.py::TestDashboard::test_timesheets_button",
+  "tests/test_dashboard.py::TestDashboard::test_timesheets_to_approve_link",
+  "tests/test_dashboard.py::TestDashboard::test_widget_PSRL_name",
+  "tests/test_dashboard.py::TestDashboard::test_widgets_taw",
+  "tests/test_login.py::TestLogin::test_login_in_app"
 ]

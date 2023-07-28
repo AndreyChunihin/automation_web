@@ -1,4 +1,7 @@
 {
   "tests/elements_test.py::Testelements::TestTextBox::test": true,
-  "tests/elements_test.py::Testelements::TestTextBox::test_text_box": true
+  "tests/elements_test.py::Testelements::TestTextBox::test_text_box": true,
+  "tests/test_dashboard.py::TestDashboard::test_timesheets_to_approve_link": true,
+  "tests/test_dashboard.py::TestDashboard::test_leave_requests_to_approve_link": true,
+  "tests/test_dashboard.py::TestDashboard::test_widget_PSRL_name": true
 }
